@@ -14,26 +14,43 @@ public:
 
 	Player(string inputName, string classType);
 
-	// Battle related methods, mostly
+	// Battle Related methods
 	void Attack();
-	void Parry();
+	bool Parry();
+	void TakeDamage(int amount);
+
+	// Attribute Related Methods
 	void LevelUp();
 	void DisplayStats();
 
 	// Getter and maybe Setter methods
 	string GetName();
 	string GetClassType();
-	int GetHealth();
+	int GetCurrentHP();
 	int GetNormalDamage();
+	int GetMagicDamage();
+	int GetDefense();
+	int GetMagicDefense();
+	int GetDodge();
+	int GetXP();
+	int GetLevel();
+
 private:
+	//String Var Decl
 	string characterName;
 	string playerClassType;
-	int health;
+
+	//Int Var Decl
+	int maxHealth;
+	int currHp;
+	bool isAlive;
 	int normalDmg;
 	int magicDmg;
-	int defence;
+	int defense;
+	int magicDefense;
 	int dodge;
 	int xp;
+	int level;
 };
 #endif // !PLAYER_H
 

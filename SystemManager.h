@@ -10,8 +10,11 @@ public:
 	SystemManager();
 
 	// Set Methods for the the beginning of the game
-	string ChooseName(string nInput);
-	string ChooseClass(string cInput);
+	string ChooseName();
+	string ChooseClass();
+	int Randomizer(int min, int max);
+	void GameMenu();
+	void Battle();
 
 private:
 };
